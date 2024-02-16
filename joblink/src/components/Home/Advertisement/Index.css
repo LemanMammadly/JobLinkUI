@@ -1,0 +1,56 @@
+.advertisement-section table .adver-name {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.advertisement-section table .adver-name .heart-svg path {
+  cursor: pointer;
+  transition: fill 0.5s ease;
+}
+
+.advertisement-section table .adver-name .heart-svg:hover path {
+  fill: #ff8686;
+  stroke: none;
+}
+
+.advertisement-section table .comp-name {
+  color: #1a1a1a;
+  font-size: 13px;
+}
+
+.advertisement-section table .adver-date {
+  color: #7f858d;
+  font-size: 13px;
+}
+
+.advertisement-section th {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.advertisement-section table .adver-name .premium{
+    border: 1px solid #00d153;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 1.2rem;
+    padding: 0.2rem 0.4rem;
+    color: #00d153;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    pointer-events: none;
+}
+
+.advertisement-section table .adver-name .new{
+    border: 1px solid #FF8585;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 1.2rem;
+    padding: 0.2rem 0.4rem;
+    color: #FF8585;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    pointer-events: none;
+}

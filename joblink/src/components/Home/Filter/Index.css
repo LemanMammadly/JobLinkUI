@@ -1,0 +1,81 @@
+.filter-section{
+    background-color: #FBFBFD;
+    border-top: 1px solid #E7EDF4;
+    border-bottom: 1px solid #E7EDF4;
+}
+
+.filter-section .all-filter-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 7px 0;
+}
+
+.filter-section select{
+    border: none;
+    outline: none;
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+    padding: 10px 25px 10px 5px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+}
+
+
+.filter-section .all-filter-section .many-filter{
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+    padding: 10px 3px 10px 10px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    background-color: #EAEDEF;
+}
+
+.filter-section .all-filter-section .inner-filters select{
+    border: none;
+    outline: none;
+    border: 1px solid #DFDFDF;
+    border-radius: 0px;
+    padding: 10px 28px 10px 10px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+}
+
+.filter-section .all-filter-section .many-filter{
+    position: relative;
+}
+
+.filter-section .all-filter-section .inner-filters{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.filter-section .all-filter-section .search-filter input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.filter-section .all-filter-section .search-filter{
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+    padding: 10px 3px 10px 10px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    background-color: #fff;
+}
+
