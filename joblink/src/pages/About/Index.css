@@ -1,0 +1,36 @@
+.about .all-about .top-about h1{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.about .all-about .top-about{
+    padding: 0;
+}
+
+.about .all-about .center-about{
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    padding: 2.5rem 1rem;
+}
+
+.about .all-about .center-about .center-about-head{
+    font-size: 18px;
+    color: #0c4dde;
+    font-weight: 500;
+}
+
+.about .all-about .center-about .center-about-text{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+    margin: 0;
+}
+
+.about .all-about .bottom-about{
+    padding: 0;
+}
+
+.about .all-about .bottom-about .bottom-about-text{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+    font-weight: 300;
+}

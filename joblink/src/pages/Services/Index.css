@@ -1,0 +1,58 @@
+.services .all-services .top-services h1{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.services .all-services .center-services .service-box{
+    border: 1px solid #E2E2E2;
+    padding: 15px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services .all-services .center-services .premium{
+    border: 1px solid #AAF673;
+    position: relative;
+}
+
+.services .all-services .center-services .premium::after{
+    position: absolute;
+    content: '"PREMIUM"';
+    top: 0;
+    right: 10%;
+    font-size: 9px;
+    font-weight: 800;
+    background-color: #AAF673;
+    padding: 3px 8px;
+    border-radius: 0 0 5px 5px;
+}
+
+.services .all-services .center-services .service-box h2{
+    font-size: 18px;
+}
+
+.services .all-services .center-services .service-box p{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 13px;
+    margin: 0;
+}
+
+.services .all-services .center-services .service-box .right-service-box{
+    color: #0c4dde;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.services .all-services .bottom-services h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.services .all-services .bottom-services p{
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7);
+}

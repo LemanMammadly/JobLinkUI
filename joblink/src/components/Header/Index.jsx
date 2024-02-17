@@ -95,12 +95,12 @@ const Index = () => {
           <div className="service-about-header d-flex">
             <ul className="d-flex gap-3">
               <li>
-                <Link key={5} id={"5"} onClick={handleClick}>
+                <Link to="/about" key={5} id={"5"} onClick={handleClick}>
                   Haqqımızda
                 </Link>
               </li>
               <li>
-                <Link key={5} id={"5"} onClick={handleClick}>
+                <Link to="/services" key={5} id={"5"} onClick={handleClick}>
                   Xidmətlər
                 </Link>
               </li>
@@ -110,6 +110,7 @@ const Index = () => {
             <ul className="d-flex align-items-center right-header-ul gap-2">
               <li>
                 <Link
+                  to="/contact"
                   key={5}
                   id={"5"}
                   className="connect"
@@ -119,7 +120,7 @@ const Index = () => {
                 </Link>
               </li>
               <li>
-                <Link key={5} id={"5"} onClick={handleClick}>
+                <Link to="/wishlist" key={5} id={"5"} onClick={handleClick}>
                   <FaHeart className="right-icons" />
                 </Link>
               </li>

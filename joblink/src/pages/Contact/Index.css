@@ -1,0 +1,56 @@
+.contact .all-contact .top-contact h1{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.contact .all-contact .bottom-contact .top-address h3{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact .all-contact .bottom-contact .address-text{
+    width: 70%;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    margin: 0;
+}
+
+.contact .all-contact .bottom-contact .telephone h3{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact .all-contact .bottom-contact .telephone-text{
+    width: 70%;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    margin: 0;
+}
+
+.contact .all-contact .bottom-contact .mobile h3{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact .all-contact .bottom-contact .mobile-text{
+    width: 70%;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    margin: 0;
+}
+
+.contact .all-contact .bottom-contact .email h3{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact .all-contact .bottom-contact .email-text{
+    width: 70%;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    margin: 0;
+}

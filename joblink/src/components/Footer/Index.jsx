@@ -10,13 +10,13 @@ const Index = () => {
           <span className="left-footer-text">© JobSearch.az 2023—2024</span>
           <ul>
             <li>
-              <Link>Haqqımızda</Link>
+              <Link to="/about">Haqqımızda</Link>
             </li>
             <li>
-              <Link>Xidmətlər</Link>
+              <Link to="/services">Xidmətlər</Link>
             </li>
             <li>
-              <Link>Əlaqə</Link>
+              <Link to="/contact">Əlaqə</Link>
             </li>
           </ul>
         </div>

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+header{
+    border-bottom: 1px solid #E7EDF4;
+}
+
 .all-header .left-header{
     align-items: center;
 }
