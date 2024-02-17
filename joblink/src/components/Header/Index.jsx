@@ -38,6 +38,7 @@ const Index = () => {
             <ul className="d-flex gap-2">
               <li>
                 <Link
+                  to="/"
                   key={1}
                   id={"1"}
                   className={`d-flex align-items-center gap-1 ${
@@ -50,6 +51,7 @@ const Index = () => {
               </li>
               <li>
                 <Link
+                  to="/category"
                   key={2}
                   id={"2"}
                   className={`d-flex align-items-center gap-1 ${
@@ -62,6 +64,7 @@ const Index = () => {
               </li>
               <li>
                 <Link
+                  to="/industry"
                   key={3}
                   id={"3"}
                   className={`d-flex align-items-center gap-1 ${
@@ -74,6 +77,7 @@ const Index = () => {
               </li>
               <li>
                 <Link
+                  to="/company"
                   key={4}
                   id={"4"}
                   className={`d-flex align-items-center gap-1 ${

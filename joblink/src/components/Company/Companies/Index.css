@@ -1,0 +1,36 @@
+.all-companies{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.companies .all-companies .company-box{
+    border: 1px solid #E7EDF4;
+    padding: 20px 15px;
+    border-radius: 15px;
+    transition: .5s;
+    cursor: pointer;
+    width: 23.30%;
+}
+
+.companies .all-companies .company-box:hover{
+    border: 1px solid #0B4DDE;
+}
+
+.companies .all-companies .company-box .company-icon img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.companies .all-companies .company-box .company-name{
+    font-size: 14px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.companies .all-companies .company-box .company-count{
+    color: #6f757e;
+    font-size: 13px;
+}

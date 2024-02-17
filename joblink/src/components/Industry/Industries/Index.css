@@ -1,0 +1,46 @@
+.all-industries{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.industries .all-industries .industry-box{
+    border: 1px solid #E7EDF4;
+    padding: 30px 15px;
+    border-radius: 15px;
+    transition: .5s;
+    cursor: pointer;
+    width: 32.3%;
+}
+
+.industries .all-industries .industry-box:hover{
+    border: 1px solid #03D153;
+}
+
+.industries .all-industries .industry-box:hover .industry-name{
+    color: #03D153;
+}
+
+.industries .all-industries .industry-box .industry-icon{
+    background-color: #F6FFF5;
+    padding: 13px;
+    border-radius: 50%;
+    color: #03D153;
+}
+
+.industries .all-industries .industry-box .industry-icon img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.industries .all-industries .industry-box .industry-name{
+    font-size: 14px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.industries .all-industries .industry-box .industry-count{
+    color: #6f757e;
+    font-size: 13px;
+}

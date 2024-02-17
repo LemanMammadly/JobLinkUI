@@ -1,0 +1,32 @@
+.industry-search{
+    background-color: #FBFBFD;
+    border-top: 1px solid #E7EDF4;
+    border-bottom: 1px solid #E7EDF4;
+    display: flex;
+    align-items: center;
+}
+
+.industry-search .industry-text{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.industry-search .right-search-industry input{
+    border: none;
+    outline: none;
+}
+
+.industry-search .right-search-industry .search-icon{
+    font-size: 20px;
+}
+
+
+
+.industry-search .right-search-industry{
+    border: 1px solid #E7EDF4;
+    padding:10px;
+    color: #7F7F7F;
+    font-size: 13px;
+    background-color: #fff;
+    border-radius: 5px;
+}

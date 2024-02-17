@@ -1,0 +1,32 @@
+.category-search{
+    background-color: #FBFBFD;
+    border-top: 1px solid #E7EDF4;
+    border-bottom: 1px solid #E7EDF4;
+    display: flex;
+    align-items: center;
+}
+
+.category-search .category-text{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.category-search .right-search-category input{
+    border: none;
+    outline: none;
+}
+
+.category-search .right-search-category .search-icon{
+    font-size: 20px;
+}
+
+
+
+.category-search .right-search-category{
+    border: 1px solid #E7EDF4;
+    padding:10px;
+    color: #7F7F7F;
+    font-size: 13px;
+    background-color: #fff;
+    border-radius: 5px;
+}

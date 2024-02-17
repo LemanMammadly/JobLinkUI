@@ -1,0 +1,32 @@
+.company-search{
+    background-color: #FBFBFD;
+    border-top: 1px solid #E7EDF4;
+    border-bottom: 1px solid #E7EDF4;
+    display: flex;
+    align-items: center;
+}
+
+.company-search .company-text{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.company-search .right-search-company input{
+    border: none;
+    outline: none;
+}
+
+.company-search .right-search-company .search-icon{
+    font-size: 20px;
+}
+
+
+
+.company-search .right-search-company{
+    border: 1px solid #E7EDF4;
+    padding:10px;
+    color: #7F7F7F;
+    font-size: 13px;
+    background-color: #fff;
+    border-radius: 5px;
+}
