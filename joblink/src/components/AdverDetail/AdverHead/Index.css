@@ -1,0 +1,112 @@
+.adver-head {
+  min-height: 100vh;
+}
+.adver-head .all-adver-head .comp-name a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #333;
+}
+
+.adver-head .all-adver-head .comp-name .other-adver a {
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #8F8F90;
+  padding: 3px;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+
+.adver-head .all-adver-head .comp-name .other-adver a:hover{
+    color: #fff;
+    background-color: #33333389;
+}
+
+.adver-head .all-adver-head .view-wish span {
+  color: rgb(111, 117, 126);
+  font-size: 13px;
+}
+
+.adver-head .all-adver-head .hr-div {
+  width: 1px;
+  height: 20px;
+  background-color: gray;
+}
+
+.adver-head .all-adver-head .heart-svg path {
+  cursor: pointer;
+  color: rgb(111, 117, 126);
+  transition: fill 0.5s ease;
+}
+
+.adver-head .all-adver-head .heart-svg:hover path {
+  fill: #ff8686;
+  stroke: none;
+}
+
+.adver-head .adver-head-bottom .adver-head-bottom-left .adver-title .new {
+  border: 1px solid #ff8585;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2rem;
+  padding: 0.2rem 0.4rem;
+  color: #ff8585;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  pointer-events: none;
+}
+
+.adver-head .adver-head-bottom .adver-head-bottom-left .adver-title .premium {
+  border: 1px solid #00d153;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2rem;
+  padding: 0.2rem 0.4rem;
+  color: #00d153;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  pointer-events: none;
+}
+
+.adver-head .adver-head-bottom .adver-head-bottom-left .adver-title h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.adver-head .adver-head-bottom .adver-head-bottom-left .deadline {
+  color: #de7d0c;
+  border: 1px solid #de7d0c;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.adver-head .adver-head-bottom .adver-head-bottom-left .category-adver a {
+  font-size: 13px;
+  color: rgb(111, 117, 126);
+}
+
+.adver-head .adver-head-bottom .adver-head-bottom-right a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #0b4dde;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+.adver-head .adver-head-bottom .adver-head-bottom-right a:hover{
+    color: #0b4dde;
+    background-color: #fff;
+    border: 1px solid #0b4dde;
+}
+
+.adver-head .adver-head-bottom .adver-head-bottom-right .print {
+  font-size: 13px;
+  color: rgb(111, 117, 126);
+}

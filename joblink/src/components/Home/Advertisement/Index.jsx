@@ -4,7 +4,7 @@ import "./Index.css";
 const Index = () => {
   return (
     <section className="advertisement-section py-lg-2 px-lg-5 px-md-3 py-md-1 px-2 py-2 my-3">
-      <table class="table">
+      <table class="table table-hover">
         <thead>
           <tr style={{ border: "1px solid #fff" }}>
             <th scope="col">Elan</th>

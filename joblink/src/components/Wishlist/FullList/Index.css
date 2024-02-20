@@ -1,37 +1,41 @@
-.advertisement-section {
+.full-list {
+  position: relative;
   min-height: 100vh;
 }
-.advertisement-section table .adver-name {
+.full-list .full-list-head h1 {
+  font-size: 24px;
+  padding: 20px 50px;
+  background-color: #fbfbfd;
+  border-bottom: 1px solid #e7edf4;
+}
+
+.full-list table .adver-name {
   font-size: 13px;
   font-weight: 500;
 }
 
-.advertisement-section table .adver-name .heart-svg path {
+.full-list table .adver-name .heart-svg path {
   cursor: pointer;
-  transition: fill 0.5s ease;
-}
-
-.advertisement-section table .adver-name .heart-svg:hover path {
   fill: #ff8686;
   stroke: none;
 }
 
-.advertisement-section table .comp-name {
+.full-list table .comp-name {
   color: #1a1a1a;
   font-size: 13px;
 }
 
-.advertisement-section table .adver-date {
+.full-list table .adver-date {
   color: #7f858d;
   font-size: 13px;
 }
 
-.advertisement-section th {
+.full-list th {
   font-size: 14px;
   font-weight: 500;
 }
 
-.advertisement-section table .adver-name .premium {
+.full-list table .adver-name .premium {
   border: 1px solid #00d153;
   border-radius: 4px;
   font-weight: 500;
@@ -44,7 +48,7 @@
   pointer-events: none;
 }
 
-.advertisement-section table .adver-name .new {
+.full-list table .adver-name .new {
   border: 1px solid #ff8585;
   border-radius: 4px;
   font-weight: 500;
@@ -64,6 +68,6 @@
 
 .table-hover tbody tr:hover td,
 .table-hover tbody tr:hover th {
-  background-color: transparent !important;
-  cursor: pointer;
+    background-color: transparent !important;
+    cursor: pointer;
 }

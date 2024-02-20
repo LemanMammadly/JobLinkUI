@@ -11,7 +11,7 @@ const Index = () => {
         <div className="empty-list-text">
           <i class="fa-solid fa-heart"></i>
           <p>Sizin seçilmiş elanınız yoxdur</p>
-          <Link>Vakansiyalara keçid</Link>
+          <Link to="/">Vakansiyalara keçid</Link>
         </div>
     </section>
   );
