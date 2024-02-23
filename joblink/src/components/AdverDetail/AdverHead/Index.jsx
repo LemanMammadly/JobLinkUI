@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Index.css";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaRegClock } from "react-icons/fa6";
@@ -6,15 +6,33 @@ import { Link } from "react-router-dom";
 import { IoFlagOutline } from "react-icons/io5";
 import { BsReplyFill } from "react-icons/bs";
 import { LuPrinter } from "react-icons/lu";
-
-
+import { IoMdClose } from "react-icons/io";
+import ComplaintModal from "../ComplaintModal/Index"
+import { FaRegBuilding } from "react-icons/fa";
 
 
 const Index = () => {
+  const [isApplyLinkVisible, setIsApplyLinkVisible] = useState(true);
+
+  const handleClick = (e) => {
+    setIsApplyLinkVisible(false);
+  };
+
+  const closeClick = () => {
+    setIsApplyLinkVisible(true);
+  };
+
+  const copy = () => {
+    var copyText = document.querySelector(".mail-link").innerText;
+    navigator.clipboard.writeText(copyText);
+    document.querySelector(".mail-link-info").innerText =
+      "E-mail ünvanı kopyalandı";
+  };
+
   return (
     <section className="adver-head">
       <div
-        className="all-adver-head px-lg-5 px-md-3 px-2 py-3 d-flex row gap-5"
+        className="all-adver-head px-lg-5 px-md-3  py-3 d-flex flex-column justify-content-between gap-5"
         style={{ backgroundColor: "#FBFBFD" }}
       >
         <div className="adver-head-top d-flex align-items-center justify-content-between">
@@ -28,7 +46,13 @@ const Index = () => {
             <div className="other-adver mx-4">
               <Link className="d-flex align-items-center gap-1">
                 {" "}
-                <BsReplyFill/> Digər vakansiyalar
+                <BsReplyFill /> Digər vakansiyalar
+              </Link>
+            </div>
+            <div className="company-about">
+              <Link className="d-flex align-items-center gap-1">
+                {" "}
+                <FaRegBuilding /> Şirkət haqqında
               </Link>
             </div>
           </div>
@@ -70,21 +94,53 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="adver-head-bottom-right text-end">
-            <div className="apply">
-              <Link>
-                {" "}
-                <i class="fa-solid fa-location-arrow me-2"></i> Müraciət et
-              </Link>
+          <div className="right-adver-head">
+            <div className="adver-head-bottom-right text-end">
+              <div className="apply">
+                {isApplyLinkVisible ? (
+                  <Link className="apply-link" onClick={handleClick}>
+                    {" "}
+                    <i class="fa-solid fa-location-arrow me-2"></i> Müraciət et
+                  </Link>
+                ) : (
+                  <Link onClick={copy} className="mail-link">
+                    {" "}
+                    <IoMdClose onClick={closeClick} className="me-1" />{" "}
+                    support@smartit.az
+                  </Link>
+                )}
+
+                {isApplyLinkVisible ? (
+                  ""
+                ) : (
+                  <div className="mail-link-info">
+                    <p>
+                      Müraciət üçün aşağıdakı email ünvanı köçürmək lazımdır.
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
-            <div className="print d-flex align-items-center gap-2 my-4">
-              <IoFlagOutline style={{fontSize:"17px"}}/> Şikayət et
+            <div className="print d-flex align-items-center gap-4 my-4">
+              <span
+                style={{ color: "rgb(111, 117, 126);", fontSize: "13px" }}
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <IoFlagOutline className="me-1" style={{ fontSize: "17px" }} />{" "}
+                Şikayət et
+              </span>
               <div className="hr-div"></div>
-              <LuPrinter style={{fontSize:"17px"}}/> Çap et
+              <span onClick={()=>window.print()} style={{ color: "rgb(111, 117, 126);", fontSize: "13px",cursor:"pointer" }}>
+                <LuPrinter className="me-1" style={{ fontSize: "17px" }} /> Çap
+                et
+              </span>
             </div>
           </div>
         </div>
       </div>
+      <ComplaintModal/>
     </section>
   );
 };

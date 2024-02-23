@@ -9,6 +9,7 @@ import Services from "./pages/Services/Index.jsx"
 import Contact from "./pages/Contact/Index.jsx"
 import Wishlist from "./pages/Wishlist/Index.jsx"
 import AdvertisementDetail from "./pages/AdvertisementDetail/Index.jsx"
+import CompanyDetail from "./pages/CompanyDetail/Index.jsx"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/wishlist" element={<Wishlist/>}/>
           <Route path="/advertisementDetail" element={<AdvertisementDetail/>}/>
+          <Route path="/companyDetail" element={<CompanyDetail/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,0 +1,185 @@
+.company-detail {
+  margin: 3rem;
+}
+.company-detail .top-company-detail img {
+  width: 70px;
+  border-radius: 10px;
+}
+
+.company-detail .top-company-detail .top-company-category h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.company-detail .top-company-detail .top-company-category a {
+  color: rgb(111, 117, 126);
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.company-detail .left-company-detail {
+  border: 1px solid #eff3f7;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.company-detail .bottom-company-detail h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.company-detail .bottom-company-detail p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.company-detail .bottom-company-detail a {
+  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.tabs {
+  position: relative;
+}
+
+.tabs .tab-header {
+  border-bottom: 1px solid #e7edf4;
+}
+
+.tabs .tab-header .title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tabs .tab-header .title.active {
+  border-bottom: 2px solid #0b4dde;
+}
+
+.tabs .tab-body h2 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tabs .tab-body p {
+  color: rgb(51, 51, 51);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.tabs .tab-header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.tabs .tab-header > div {
+  width: 25%;
+  text-align: center;
+  padding: 15px 0px;
+  color: #0e0e0e;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 300ms ease-in-out;
+}
+
+.tabs .tab-body {
+  position: relative;
+}
+.tabs .tab-body > div {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  opacity: 0;
+  top: -100vh;
+}
+.tabs .tab-body > div > * {
+  margin: 10px 0px;
+}
+
+.tabs .tab-body > div > p {
+  color: #555;
+  font-size: 15px;
+}
+
+.tabs .tab-body > div.active {
+  top: 0px;
+  opacity: 1;
+  transition: top 0ms ease-in-out 0ms, opacity 500ms ease-in-out 0ms;
+}
+
+.company-detail .tab-content{
+    height: 60vh;
+    overflow: auto;
+    display: inline-block;
+    width: 100%;
+}
+
+.company-detail .right-company-detail table .adver-name .premium {
+  border: 1px solid #00d153;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 1.2rem;
+  padding: 0.2rem 0.4rem;
+  color: #00d153;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  pointer-events: none;
+}
+
+.company-detail .right-company-detail table .adver-name .new {
+  border: 1px solid #ff8585;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 1.2rem;
+  padding: 0.2rem 0.4rem;
+  color: #ff8585;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  pointer-events: none;
+}
+
+.company-detail .right-company-detail .table-hover tbody td,
+.company-detail .right-company-detail .table-hover tbody th {
+  transition: 1s all;
+}
+
+.company-detail .right-company-detail .table-hover tbody tr:hover td,
+.company-detail .right-company-detail .table-hover tbody tr:hover th {
+  background-color: transparent !important;
+  cursor: pointer;
+}
+
+.company-detail .right-company-detail table .adver-name {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.company-detail .right-company-detail table .adver-name .heart-svg path {
+  cursor: pointer;
+  transition: fill 0.5s ease;
+}
+
+.company-detail .right-company-detail table .adver-name .heart-svg:hover path {
+  fill: #ff8686;
+  stroke: none;
+}
+
+.company-detail .right-company-detail table .comp-name {
+  color: #1a1a1a;
+  font-size: 13px;
+}
+
+.company-detail .right-company-detail table .adver-date {
+  color: #7f858d;
+  font-size: 13px;
+}
+
+.company-detail .right-company-detail th {
+  font-size: 14px;
+  font-weight: 500;
+}

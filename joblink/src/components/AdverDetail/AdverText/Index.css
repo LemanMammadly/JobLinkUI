@@ -1,0 +1,142 @@
+.adver-text .left-adver-text .adver-details h1{
+    font-size: 18px;
+    color:rgb(37, 45, 64);
+    background-color: #F5F6F7;
+    padding: 10px;
+    border-left: 3px solid #0B4DDE;
+}
+
+.adver-text .left-adver-text .adver-details{
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+}
+
+.adver-text .left-adver-text .adver-details .tag-icon{
+    color: #ADADAD;
+}
+
+.adver-text .left-adver-text .adver-details .tag{
+    font-size: 15px;
+    transition: .5s;
+    cursor: pointer;
+
+}
+
+.adver-text .left-adver-text .adver-details .tag:hover{
+    color:rgb(35, 82, 124) ;
+}
+
+.adver-text .left-adver-text .adver-details .busy-time span{
+    color:  rgb(102, 114, 123);
+    font-size: 15px;
+}
+
+.adver-text .left-adver-text .adver-details .busy-time p{
+    background-color: #dcdcdc;
+    color: #818181;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 3px;
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+
+.adver-text .left-adver-text .adver-description{
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+}
+
+.adver-text .left-adver-text .adver-description h1{
+    font-size: 18px;
+    color:rgb(37, 45, 64);
+    background-color: #F5F6F7;
+    padding: 10px;
+    border-left: 3px solid #0B4DDE;
+}
+
+
+.adver-text .left-adver-text .adver-description .descs ul li{
+    color: rgb(102, 116, 136);
+    font-size: 15px;
+}
+
+.adver-text .left-adver-text .adver-recruiments{
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+}
+
+.adver-text .left-adver-text .adver-recruiments h1{
+    font-size: 18px;
+    color:rgb(37, 45, 64);
+    background-color: #F5F6F7;
+    padding: 10px;
+    border-left: 3px solid #0B4DDE;
+}
+
+
+.adver-text .left-adver-text .adver-recruiments .recruiments ul li{
+    color: rgb(102, 116, 136);
+    font-size: 15px;
+}
+
+.adver-text .left-adver-text .adver-recruiments .apply-email p{
+    font-size: 15px;
+    color: rgb(102, 116, 136);
+}
+
+.adver-text .right-adver-text .about-adver h1{
+    font-size: 17px;
+    color: #fff;
+    background-color: #0B4DDE;
+    padding: 15px;
+}
+
+.adver-text .right-adver-text .about-adver{
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+}
+
+.adver-text .right-adver-text .about-adver .about-adver-boxes{
+    padding: 25px;
+}
+
+.adver-text .right-adver-text .about-adver .about-icon{
+    color: rgb(164, 171, 181);
+    font-size: 30px;
+}
+
+.adver-text .right-adver-text .about-adver .about-adver-box .right-adver-about span{
+    font-size: 14px;
+    color: rgb(39, 47, 70);
+}
+
+.adver-text .right-adver-text .about-adver .about-adver-box .right-adver-about p{
+    color: rgb(112, 124, 136);
+    font-size: 15px;
+}
+
+
+.adver-text .right-adver-text .adver-share{
+    border: 1px solid #E7EDF4;
+    border-radius: 10px;
+}
+
+.adver-text .right-adver-text .adver-share span{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.adver-text .right-adver-text .adver-share p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.adver-text .right-adver-text .adver-share .left-top-share{
+    border-right: 1px solid #E7EDF4;
+}
+
+.adver-text .right-adver-text .adver-share .bottom-share{
+    border-top: 1px solid #E7EDF4;
+}
+
+.adver-text .right-adver-text .adver-share .share-box{
+    padding: 15px;
+}
