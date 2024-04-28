@@ -97,7 +97,7 @@ const Index = () => {
               <div className="otherVacancies">
                 <table class="table table-hover">
                   <thead>
-                    <tr style={{ border: "1px solid #fff" }}>
+                    <tr className="other-table" style={{ border: "1px solid #fff" }}>
                       <th scope="col">Elan</th>
                       <th
                         scope="col"
@@ -122,7 +122,7 @@ const Index = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr className="other-table">
                       <td
                         style={{
                           whiteSpace: "nowrap",
@@ -172,7 +172,7 @@ const Index = () => {
                         16 mart
                       </td>
                     </tr>
-                    <tr>
+                    <tr className="other-table">
                       <td
                         style={{
                           whiteSpace: "nowrap",

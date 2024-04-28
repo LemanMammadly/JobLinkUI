@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Index.css";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaRegClock } from "react-icons/fa6";
@@ -9,9 +9,10 @@ import { LuPrinter } from "react-icons/lu";
 import { IoMdClose } from "react-icons/io";
 import ComplaintModal from "../ComplaintModal/Index"
 import { FaRegBuilding } from "react-icons/fa";
-
+import axios from 'axios';
 
 const Index = () => {
+  const [data,setData]=useState();
   const [isApplyLinkVisible, setIsApplyLinkVisible] = useState(true);
 
   const handleClick = (e) => {
@@ -28,6 +29,19 @@ const Index = () => {
     document.querySelector(".mail-link-info").innerText =
       "E-mail ünvanı kopyalandı";
   };
+
+  useEffect(()=>{
+    axios.get(
+      `https://localhost:7131/api/Advertisements/Get`
+    )
+    .then((res)=>{
+      setData(res.data)
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+  },[])
+
 
   return (
     <section className="adver-head">

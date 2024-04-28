@@ -53,6 +53,10 @@
   font-weight: 600;
 }
 
+.darkmode--activated .tabs .tab-header .title{
+  color: #fff;
+}
+
 .tabs .tab-header .title.active {
   border-bottom: 2px solid #0b4dde;
 }
@@ -60,6 +64,10 @@
 .tabs .tab-body h2 {
   font-size: 14px;
   font-weight: 600;
+}
+
+.darkmode--activated .tabs .tab-body h2 {
+  color: #fff;
 }
 
 .tabs .tab-body p {
@@ -150,7 +158,6 @@
 
 .company-detail .right-company-detail .table-hover tbody tr:hover td,
 .company-detail .right-company-detail .table-hover tbody tr:hover th {
-  background-color: transparent !important;
   cursor: pointer;
 }
 
@@ -158,6 +165,7 @@
   font-size: 13px;
   font-weight: 500;
 }
+
 
 .company-detail .right-company-detail table .adver-name .heart-svg path {
   cursor: pointer;

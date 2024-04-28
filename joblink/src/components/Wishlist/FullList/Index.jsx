@@ -10,7 +10,7 @@ const Index = () => {
         <div className="full-list-text py-lg-2 px-lg-5 px-md-3 py-md-1 px-2 py-2 my-3">
         <table class="table table-hover">
         <thead>
-          <tr style={{ border: "1px solid #fff" }}>
+          <tr className='wislish-table' style={{ border: "1px solid #fff" }}>
             <th scope="col">Elan</th>
             <th scope="col">Şirkət</th>
             <th scope="col">Dərc olunub</th>
@@ -18,7 +18,7 @@ const Index = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr className='wislish-table'>
             <td className="adver-name">
               <svg
                 className="me-2 heart-svg"
@@ -48,7 +48,7 @@ const Index = () => {
             <td className="adver-date">16 fevral</td>
             <td className="adver-date">16 mart</td>
           </tr>
-          <tr>
+          <tr className='wislish-table'>
             <td className="adver-name">
             <svg
                 className="me-2 heart-svg"

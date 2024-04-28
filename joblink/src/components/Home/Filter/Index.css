@@ -32,10 +32,22 @@
     border: 1px solid #DFDFDF;
     border-radius: 5px;
     padding: 10px 3px 10px 10px;
-    background-color: #fff;
-    color: rgba(0, 0, 0, 0.5);
+    color: #000;
     font-size: 13px;
     background-color: #EAEDEF;
+}
+
+
+.darkmode--activated .filter-section .all-filter-section .many-filter{
+    background-color: #1F1F1F !important;
+    color:#616161 !important;
+    border: 1px solid #010101;
+}
+
+.darkmode--activated .filter-section .all-filter-section .inner-filters select{
+    background-color: #1F1F1F !important;
+    color:#616161 !important;
+    border: 1px solid #010101;
 }
 
 .filter-section .all-filter-section .inner-filters select{

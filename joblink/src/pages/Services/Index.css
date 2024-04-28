@@ -39,6 +39,17 @@
     margin: 0;
 }
 
+.darkmode--activated .services .all-services .center-services .service-box .premium-p {
+    color:#949494;
+    font-size: 13px;
+    margin: 0;
+}
+
+.darkmode--activated .services .all-services .center-services .service-box .premium-h2 {
+    font-size: 18px;
+    color: #BFBBB6;
+}
+
 .services .all-services .center-services .service-box .right-service-box{
     color: #0c4dde;
     font-size: 16px;

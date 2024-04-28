@@ -14,7 +14,7 @@ const Index = () => {
           <div className="adver-details">
             <h1 className="m-0">Vakansiyanın detalları</h1>
             <div className="busy-time d-flex gap-4 px-3 py-2">
-              <span className="m-0">Məşğulluq :</span>
+              <span className="m-0">Məşğuliyyət :</span>
               <p className="m-0">Tam iş günü</p>
             </div>
             <div
