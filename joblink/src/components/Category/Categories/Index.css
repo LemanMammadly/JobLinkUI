@@ -4,6 +4,10 @@
     gap: 20px;
 }
 
+.categories {
+    min-height: 73vh;
+}
+
 .categories .all-categories .category-box{
     border: 1px solid #E7EDF4;
     padding: 30px 15px;
@@ -21,13 +25,18 @@
     color: #0B4DDE;
 }
 
-.categories .all-categories .category-box .category-icon{
+.categories .all-categories .category-box .category-logo{
     background-color: #F3F6FE;
-    padding: 13px;
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
 
-.categories .all-categories .category-box .category-icon img{
+.categories .all-categories .category-box .category-logo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
     display: flex;
     align-items: center;
     justify-content: center;

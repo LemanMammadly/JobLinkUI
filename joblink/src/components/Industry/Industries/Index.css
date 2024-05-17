@@ -4,6 +4,10 @@
     gap: 20px;
 }
 
+.industries{
+    min-height: 73vh;
+}
+
 .industries .all-industries .industry-box{
     border: 1px solid #E7EDF4;
     padding: 30px 15px;
@@ -23,15 +27,21 @@
 
 .industries .all-industries .industry-box .industry-icon{
     background-color: #F6FFF5;
-    padding: 13px;
+    padding: 1px;
     border-radius: 50%;
     color: #03D153;
+    width: 40px;
+    height: 40px;
 }
 
 .industries .all-industries .industry-box .industry-icon img{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .industries .all-industries .industry-box .industry-name{
