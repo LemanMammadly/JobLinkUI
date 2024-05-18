@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Index.css";
 import axios from "axios";
+import SearchContext from "../../../contexts/SearchContext";
 
 const Index = () => {
   const [data, setData] = useState([]);
+  const {searchValue} =useContext(SearchContext);
 
   useEffect(() => {
     axios
@@ -39,6 +41,10 @@ const Index = () => {
     return `${day} ${months[month]}`;
   };
 
+  const filteredAdvertisement = data.filter((adver)=>
+    adver.title.toLowerCase().includes(searchValue.toLowerCase())
+  )
+
   return (
     <section className="advertisement-section py-lg-2 px-lg-5 px-md-3 py-md-1 px-2 py-2 my-3">
       <table class="table table-hover">
@@ -51,7 +57,7 @@ const Index = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((datas) => (
+          {filteredAdvertisement.map((datas) => (
             <tr key={datas.id}>
               <td className="adver-name">
                 <svg

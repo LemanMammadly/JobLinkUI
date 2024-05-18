@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import "./Index.css";
+import SearchContext from "../../../contexts/SearchContext"
 
 const Index = () => {
   const [showFilters, setShowFilters] = useState(false);
+  const {setSearchValue} = useContext(SearchContext)
 
   const toggleFilters = () => {
     setShowFilters(!showFilters);
@@ -13,6 +15,13 @@ const Index = () => {
   const handleInnerClick = (e) => {
     e.stopPropagation();
   };
+
+
+  const searchByName = (e) => {
+    let value = e.target.value;
+    setSearchValue(value);
+  }
+
 
   return (
     <section className="py-lg-2 px-lg-5 px-md-3 py-md-1 px-2 py-2 filter-section">
@@ -135,7 +144,7 @@ const Index = () => {
           </div>
         </div>
         <div className="search-filter">
-          <input type="text" placeholder="Axtarış" />
+          <input type="text" placeholder="Axtarış" onChange={searchByName} />
           <CiSearch style={{ fontSize: "19px" }} />
         </div>
       </div>
