@@ -2,10 +2,15 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Index.css";
 import axios from "axios";
 import SearchContext from "../../../contexts/SearchContext";
+import AdvertisementFilterContext from "../../../contexts/AdvertisementFilterContext";
 
 const Index = () => {
   const [data, setData] = useState([]);
-  const {searchValue} =useContext(SearchContext);
+  const {searchValue} = useContext(SearchContext);
+  const {filterValue} = useContext(AdvertisementFilterContext);
+  
+  console.log(filterValue);
+
 
   useEffect(() => {
     axios

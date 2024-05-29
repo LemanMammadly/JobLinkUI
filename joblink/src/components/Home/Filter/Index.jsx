@@ -3,10 +3,12 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import "./Index.css";
 import SearchContext from "../../../contexts/SearchContext"
+import AdvertisementFilterContext from "../../../contexts/AdvertisementFilterContext";
 
 const Index = () => {
   const [showFilters, setShowFilters] = useState(false);
   const {setSearchValue} = useContext(SearchContext)
+  const {setFilterValue} = useContext(AdvertisementFilterContext);
 
   const toggleFilters = () => {
     setShowFilters(!showFilters);
@@ -22,18 +24,23 @@ const Index = () => {
     setSearchValue(value);
   }
 
+  const filterByDate = (e) =>{
+    let value = e.target.value;
+    setFilterValue(value);
+  }
+
 
   return (
     <section className="py-lg-2 px-lg-5 px-md-3 py-md-1 px-2 py-2 filter-section">
       <div className="all-filter-section">
         <div className="all-left-filters d-flex gap-5">
-          <select name="" id="" style={{ cursor: "pointer" }}>
+          <select onChange={filterByDate} name="" id="" style={{ cursor: "pointer" }}>
             <option value="">Yerləşdirilib</option>
-            <option value="">1 gün</option>
-            <option value="">3 gün</option>
-            <option value="">1 həftə</option>
-            <option value="">10 gün</option>
-            <option value="">2 həftə</option>
+            <option value="1">1 gün</option>
+            <option value="3">3 gün</option>
+            <option value="7">1 həftə</option>
+            <option value="10">10 gün</option>
+            <option value="14">2 həftə</option>
           </select>
           <select name="" id="" style={{ cursor: "pointer" }}>
             <option value="">Sıralama</option>
