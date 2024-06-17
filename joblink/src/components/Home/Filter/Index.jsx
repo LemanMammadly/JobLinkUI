@@ -8,7 +8,10 @@ import AdvertisementFilterContext from "../../../contexts/AdvertisementFilterCon
 const Index = () => {
   const [showFilters, setShowFilters] = useState(false);
   const {setSearchValue} = useContext(SearchContext)
-  const {setFilterValue} = useContext(AdvertisementFilterContext);
+  const {setFilterDate} = useContext(AdvertisementFilterContext);
+  const {setFilterSalary} = useContext(AdvertisementFilterContext);
+  const {setFilterSort} = useContext(AdvertisementFilterContext);
+  const {setFilterArea} = useContext(AdvertisementFilterContext);
 
   const toggleFilters = () => {
     setShowFilters(!showFilters);
@@ -26,9 +29,23 @@ const Index = () => {
 
   const filterByDate = (e) =>{
     let value = e.target.value;
-    setFilterValue(value);
+    setFilterDate(value);
   }
 
+  const filterBySalary = (e) =>{
+    let value = e.target.value;
+    setFilterSalary(value);
+  }
+
+  const filterBySort = (e) =>{
+    let value = e.target.value;
+    setFilterSort(value);
+  }
+
+  const filterByArea = (e) =>{
+    let value = e.target.value;
+    setFilterArea(value);
+  }
 
   return (
     <section className="py-lg-2 px-lg-5 px-md-3 py-md-1 px-2 py-2 filter-section">
@@ -42,13 +59,12 @@ const Index = () => {
             <option value="10">10 gün</option>
             <option value="14">2 həftə</option>
           </select>
-          <select name="" id="" style={{ cursor: "pointer" }}>
+          <select onChange={filterBySort} name="" id="" style={{ cursor: "pointer" }}>
             <option value="">Sıralama</option>
-            <option value="">Maaş üzrə</option>
-            <option value="">Vəzifə adı A-Z</option>
-            <option value="">Şirkət adı A-Z</option>
-            <option value="">Ən çox baxış sayı</option>
-            <option value="">Ən populyar kategoriya üzrə</option>
+            <option value="1">Maaş üzrə</option>
+            <option value="2">Vəzifə adı A-Z</option>
+            <option value="3">Şirkət adı A-Z</option>
+            <option value="4">Ən çox baxış sayı</option>
           </select>
           <div
             className="many-filter gap-3"
@@ -67,15 +83,15 @@ const Index = () => {
                 className="inner-filters d-flex flex-column"
                 onClick={handleInnerClick}
               >
-                <select name="" id="">
+                <select onChange={filterBySalary} name="" id="">
                   <option value="">Maaş</option>
-                  <option value="">0-500</option>
-                  <option value="">500-1000</option>
-                  <option value="">1000-2000</option>
-                  <option value="">2000-5000</option>
-                  <option value="">5000+</option>
+                  <option value="1">0-500</option>
+                  <option value="2">500-1000</option>
+                  <option value="3">1000-2000</option>
+                  <option value="4">2000-5000</option>
+                  <option value="5">5000+</option>
                 </select>
-                <select name="" id="">
+                <select onChange={filterByArea} name="" id="">
                   <option value="">Ərazi</option>
                   <option value="Ağcabədi">Ağcabədi</option>
                   <option value="Ağdam">Ağdam</option>

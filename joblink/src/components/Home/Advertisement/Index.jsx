@@ -6,22 +6,35 @@ import AdvertisementFilterContext from "../../../contexts/AdvertisementFilterCon
 
 const Index = () => {
   const [data, setData] = useState([]);
-  const {searchValue} = useContext(SearchContext);
-  const {filterValue} = useContext(AdvertisementFilterContext);
-  
-  console.log(filterValue);
-
+  const { searchValue } = useContext(SearchContext);
+  const { filterDate } = useContext(AdvertisementFilterContext);
+  const { filterSalary } = useContext(AdvertisementFilterContext);
+  const { filterSort } = useContext(AdvertisementFilterContext);
+  const { filterArea } = useContext(AdvertisementFilterContext);
 
   useEffect(() => {
     axios
-      .get("https://localhost:7131/api/Advertisements/Get")
+      .get("https://localhost:7131/api/Advertisements/GetAccept")
       .then((res) => {
         setData(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [searchValue]);
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://localhost:7131/api/Advertisements/FilterAll?Date=${filterDate}&Sort=${filterSort}&Salary=${filterSalary}&Area=${filterArea}`
+      )
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [filterDate,filterSort,filterSalary,filterArea]);
 
   const months = [
     "Yanvar",
@@ -46,9 +59,9 @@ const Index = () => {
     return `${day} ${months[month]}`;
   };
 
-  const filteredAdvertisement = data.filter((adver)=>
+  const filteredAdvertisement = data.filter((adver) =>
     adver.title.toLowerCase().includes(searchValue.toLowerCase())
-  )
+  );
 
   return (
     <section className="advertisement-section py-lg-2 px-lg-5 px-md-3 py-md-1 px-2 py-2 my-3">
@@ -90,7 +103,12 @@ const Index = () => {
                 <img
                   className="me-2"
                   src={datas.company.logo}
-                  style={{ width: "25px", height: "25px", borderRadius: "50%" ,objectFit:"cover"}}
+                  style={{
+                    width: "25px",
+                    height: "25px",
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                  }}
                   alt=""
                 />{" "}
                 {datas.company.name}
