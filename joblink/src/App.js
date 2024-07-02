@@ -13,6 +13,7 @@ import CompanyDetail from "./pages/CompanyDetail/Index.jsx";
 import Error from "./pages/Error/Index.jsx";
 
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -27,7 +28,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/wishlist" element={<Wishlist />} />
             <Route
-              path="/advertisementDetail"
+              path="/advertisementDetail/:id"
               element={<AdvertisementDetail />}
             />
             <Route path="/companyDetail" element={<CompanyDetail />} />

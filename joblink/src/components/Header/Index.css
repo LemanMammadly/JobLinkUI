@@ -1,122 +1,118 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header{
-    border-bottom: 1px solid #E7EDF4;
+header {
+  border-bottom: 1px solid #e7edf4;
 }
 
-.all-header .left-header{
-    align-items: center;
+.all-header .left-header {
+  align-items: center;
 }
 
-.all-header .left-header ul{
-    list-style: none;
-    margin: 0;
+.all-header .left-header ul {
+  list-style: none;
+  margin: 0;
 }
 
-
-.all-header .left-header ul li a{
-    font-size: 13px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 8px 12px;
+.all-header .left-header ul li a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 12px;
 }
 
-.all-header .left-header ul li a:hover{
-    color: #0c4dde;
-    transition: .5s;
+.all-header .left-header ul li a:hover {
+  color: #0c4dde;
+  transition: 0.5s;
 }
 
-.all-header .left-header ul li .icons{
-    font-size: 15px;
+.all-header .left-header ul li .icons {
+  font-size: 15px;
 }
 
-
-.all-header .left-header .active-button{
-    padding: 8px 12px;
-    background-color: #0c4dde;
-    color: #fff;
-    border-radius: 5px;
+.all-header .left-header .active-button {
+  padding: 8px 12px;
+  background-color: #0c4dde;
+  color: #fff;
+  border-radius: 5px;
 }
 
-.all-header .left-header .active-button:hover{
-    color: #fff;
+.all-header .left-header .active-button:hover {
+  color: #fff;
 }
 
-.all-header .right-header{
-    align-items: center;
+.all-header .right-header {
+  align-items: center;
 }
 
 .all-header .right-header ul {
-    list-style: none;
-    margin: 0;
+  list-style: none;
+  margin: 0;
 }
 
-.all-header .right-header ul li a{
-    text-decoration: none;
-    color: #a3a3a3;
-    font-size: 13px;
+.all-header .right-header ul li a {
+  text-decoration: none;
+  color: #a3a3a3;
+  font-size: 13px;
 }
 
-.all-header .right-header ul li a:hover{
-    color: #0c4dde;
-    transition: .5s;
+.all-header .right-header ul li a:hover {
+  color: #0c4dde;
+  transition: 0.5s;
 }
 
-.all-header .right-header .right-header-ul li a{
-    padding: 7px 8px;
-    background-color: transparent;
-    border: 1px solid  #a3a3a3;
-    color: #838383;
-    border-radius: 5px;
-    font-size: 13px;
+.all-header .right-header .right-header-ul li a {
+  padding: 7px 8px;
+  background-color: transparent;
+  border: 1px solid #a3a3a3;
+  color: #838383;
+  border-radius: 5px;
+  font-size: 13px;
 }
 
-
-.all-header .right-header .right-header-ul .connect{
-    color: #0c4dde;
-    border: 1px solid #0c4dde;
-    border-radius: 5px;
+.all-header .right-header .right-header-ul .connect {
+  color: #0c4dde;
+  border: 1px solid #0c4dde;
+  border-radius: 5px;
 }
 
-.all-header .right-header .right-header-ul .connect:hover{
-    color: #fff;
-    background-color: #0c4dde;
+.all-header .right-header .right-header-ul .connect:hover {
+  color: #fff;
+  background-color: #0c4dde;
 }
 
-.all-header .right-header .right-header-ul .right-icons{
-    font-size: 14px;
+.all-header .right-header .right-header-ul .right-icons {
+  font-size: 14px;
 }
 
-.all-header .right-header-mobile{
-    display: none;
+.all-header .right-header-mobile {
+  display: none;
 }
-
 
 @media screen and (max-width: 992px) {
-    header {
-        margin: 15px 0 !important;
-        padding:0px 0px !important;
-    }
-    .all-header{
-        display: flex;
-        justify-content: space-between;
-    }
-    .all-header .left-header .menu-header{
-        display: none;
-    }
-    .all-header .right-header{
-        display: none !important;
-    }
-    .all-header .left-header .image-div{
-        width: 200px !important;
-    }
-    .all-header .right-header-mobile{
-        display: block;
-        font-size: 25px;
-    }
+  header {
+    margin: 15px 0 !important;
+    padding: 0px 0px !important;
+  }
+  .all-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .all-header .left-header .menu-header {
+    display: none;
+  }
+  .all-header .right-header {
+    display: none !important;
+  }
+  .all-header .left-header .image-div {
+    width: 200px !important;
+  }
+  .all-header .right-header-mobile {
+    display: block;
+    font-size: 25px;
+  }
 }

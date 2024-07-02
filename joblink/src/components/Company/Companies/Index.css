@@ -4,6 +4,11 @@
     gap: 30px;
 }
 
+.companies{
+    min-height: 73vh;
+}
+
+
 .companies .all-companies .company-box{
     border: 1px solid #E7EDF4;
     padding: 20px 15px;

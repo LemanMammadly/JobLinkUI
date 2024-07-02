@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
     "darkmode-js": "^1.5.7",
+    "date-fns": "^3.6.0",
     "outlet": "^0.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

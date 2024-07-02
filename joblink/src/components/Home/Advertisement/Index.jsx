@@ -3,6 +3,7 @@ import "./Index.css";
 import axios from "axios";
 import SearchContext from "../../../contexts/SearchContext";
 import AdvertisementFilterContext from "../../../contexts/AdvertisementFilterContext";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const [data, setData] = useState([]);
@@ -11,6 +12,8 @@ const Index = () => {
   const { filterSalary } = useContext(AdvertisementFilterContext);
   const { filterSort } = useContext(AdvertisementFilterContext);
   const { filterArea } = useContext(AdvertisementFilterContext);
+
+  const navigate =  useNavigate();
 
   useEffect(() => {
     axios
@@ -34,7 +37,7 @@ const Index = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [filterDate,filterSort,filterSalary,filterArea]);
+  }, [filterDate, filterSort, filterSalary, filterArea]);
 
   const months = [
     "Yanvar",
@@ -63,6 +66,10 @@ const Index = () => {
     adver.title.toLowerCase().includes(searchValue.toLowerCase())
   );
 
+  const handleAdverClick = (id) => {
+    navigate(`advertisementDetail/${id}`)
+  };
+
   return (
     <section className="advertisement-section py-lg-2 px-lg-5 px-md-3 py-md-1 px-2 py-2 my-3">
       <table class="table table-hover">
@@ -76,7 +83,7 @@ const Index = () => {
         </thead>
         <tbody>
           {filteredAdvertisement.map((datas) => (
-            <tr key={datas.id}>
+            <tr key={datas.id} onClick={()=>handleAdverClick(datas.id)}>
               <td className="adver-name">
                 <svg
                   className="me-2 heart-svg"

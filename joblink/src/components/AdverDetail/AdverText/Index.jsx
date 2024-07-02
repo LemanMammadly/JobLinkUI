@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Index.css";
 import { IoWalletOutline } from "react-icons/io5";
 import { FaTag } from "react-icons/fa6";
 import { AiOutlineHome } from "react-icons/ai";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { IoBookOutline } from "react-icons/io5";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const Index = () => {
+  const [data, setData] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    axios
+      .get(`https://localhost:7131/api/Advertisements/GetFalse/${id}`)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [id]);
+
   return (
     <section className="adver-text px-lg-5 px-md-3 py-5">
       <div className="all-adver-text col-lg-12 d-flex justify-content-between gap-3">
@@ -21,105 +37,23 @@ const Index = () => {
               className="tags-adver d-flex flex-wrap gap-3 px-3 py-2"
               style={{ backgroundColor: "#F5F6F7" }}
             >
-              <div className="tag">
-                <FaTag className="tag-icon" /> OOP
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> PHP
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> JS
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> HTML
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> CSS
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> OOP
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> PHP
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> JS
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> HTML
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> CSS
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> OOP
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> PHP
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> JS
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> HTML
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> CSS
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> OOP
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> PHP
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> JS
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> HTML
-              </div>
-              <div className="tag">
-                <FaTag className="tag-icon" /> CSS
-              </div>
+              {data.advertisementAbilities &&
+                data.advertisementAbilities.map((item,index) => (
+                  <div key={index} className="tag">
+                    <FaTag className="tag-icon" /> {item.ability.name}
+                  </div>
+                ))}
             </div>
           </div>
           <div className="adver-description">
             <h1 className="m-0">Vakansiyanın təsviri</h1>
             <div className="descs d-flex p-3">
               <ul className="d-flex flex-column gap-2">
-                <li>yeni veb-layihələr üzərində işləməsi</li>
-                <li>mövcud veb-layihələrin inkişaf etdirilməsi</li>
-                <li>komanda üzvü kimi veb-layihələr üzərində işləməsi</li>
-                <li>
-                  layihələri planlaması, inkişaf etdirməsi, deploy etməsi və
-                  baxım
-                </li>
-                <li>
-                  məhsulun biznes məntiqinin və back-end sisteminin dizayn
-                  olunması və proqramlaşdırılması
-                </li>
-                <li>yeni veb-layihələr üzərində işləməsi</li>
-                <li>mövcud veb-layihələrin inkişaf etdirilməsi</li>
-                <li>komanda üzvü kimi veb-layihələr üzərində işləməsi</li>
-                <li>
-                  layihələri planlaması, inkişaf etdirməsi, deploy etməsi və
-                  baxım
-                </li>
-                <li>
-                  məhsulun biznes məntiqinin və back-end sisteminin dizayn
-                  olunması və proqramlaşdırılması
-                </li>
-                <li>yeni veb-layihələr üzərində işləməsi</li>
-                <li>mövcud veb-layihələrin inkişaf etdirilməsi</li>
-                <li>komanda üzvü kimi veb-layihələr üzərində işləməsi</li>
-                <li>
-                  layihələri planlaması, inkişaf etdirməsi, deploy etməsi və
-                  baxım
-                </li>
-                <li>
-                  məhsulun biznes məntiqinin və back-end sisteminin dizayn
-                  olunması və proqramlaşdırılması
-                </li>
+                {
+                  data.jobDescriptions && data.jobDescriptions.map((item,index)=>(
+                    <li key={index}>{item.description}</li>
+                  ))
+                }
               </ul>
             </div>
           </div>
@@ -127,38 +61,19 @@ const Index = () => {
             <h1 className="m-0">Xüsusi tələblər</h1>
             <div className="recruiments d-flex flex-column gap-3 p-3">
               <ul className="d-flex flex-column gap-2">
-                <li>yeni veb-layihələr üzərində işləməsi</li>
-                <li>mövcud veb-layihələrin inkişaf etdirilməsi</li>
-                <li>komanda üzvü kimi veb-layihələr üzərində işləməsi</li>
-                <li>
-                  layihələri planlaması, inkişaf etdirməsi, deploy etməsi və
-                  baxım
-                </li>
-                <li>
-                  məhsulun biznes məntiqinin və back-end sisteminin dizayn
-                  olunması və proqramlaşdırılması
-                </li>
-                <li>yeni veb-layihələr üzərində işləməsi</li>
-                <li>mövcud veb-layihələrin inkişaf etdirilməsi</li>
-                <li>komanda üzvü kimi veb-layihələr üzərində işləməsi</li>
-                <li>
-                  layihələri planlaması, inkişaf etdirməsi, deploy etməsi və
-                  baxım
-                </li>
-                <li>
-                  məhsulun biznes məntiqinin və back-end sisteminin dizayn
-                  olunması və proqramlaşdırılması
-                </li>
-                <li>yeni veb-layihələr üzərində işləməsi</li>
-                <li>komanda üzvü kimi veb-layihələr üzərində işləməsi</li>
+                {
+                  data.reqruiments && data.reqruiments.map((item,index)=>(
+                    <li key={index}>{item.text}</li>
+                  ))
+                }
               </ul>
               <div className="apply-email">
                 <p>
                   {" "}
                   Vakansiya ilə bağlı müraciət üçün CV formasını e-mail
-                  vasitəsilə mövzu yerinə
-                  <span style={{ fontWeight: "bold" }}>
-                    “Texniki ofis mühəndisi”
+                  vasitəsilə mövzu yerinə 
+                  <span style={{ fontWeight: "bold" ,margin: "0 5px"}}>
+                    “{data.title}”
                   </span>{" "}
                   üzrə yazmaqla elektron ünvanına göndərməyiniz xahiş olunur.
                   Yalnız vakansiya tələblərinə uyğun namizədlərlə əlaqə
@@ -188,7 +103,7 @@ const Index = () => {
                 </div>
                 <div className="right-adver-about mx-3">
                   <span>Əmək haqqı</span>
-                  <p className="m-0">Razılaşma yolu ilə</p>
+                  <p className="m-0">{data.salary}</p>
                 </div>
               </div>
               <hr />
@@ -198,7 +113,7 @@ const Index = () => {
                 </div>
                 <div className="right-adver-about mx-3">
                   <span>Kateqoriya</span>
-                  <p className="m-0">Development (Proqramlaşdırma)</p>
+                  <p className="m-0">{data.category && data.category.name}</p>
                 </div>
               </div>
               <hr />
@@ -208,7 +123,7 @@ const Index = () => {
                 </div>
                 <div className="right-adver-about mx-3">
                   <span>İş stajı(il)</span>
-                  <p className="m-0">3-5 il</p>
+                  <p className="m-0">{data.experience}</p>
                 </div>
               </div>
               <hr />
@@ -218,7 +133,9 @@ const Index = () => {
                 </div>
                 <div className="right-adver-about mx-3">
                   <span>Tələb olunan təhsil</span>
-                  <p className="m-0">Ali təhsil</p>
+                  <p className="m-0">{
+                  data.education === "Middle" ? "Orta Təhsil" : data.education === "bachelor" ? "Bakalavr" : "Magistr"
+                  }</p>
                 </div>
               </div>
               <hr />
@@ -228,16 +145,16 @@ const Index = () => {
             <div className="top-share d-flex gap-3 col-lg-12">
               <div className="left-top-share share-box col-lg-6">
                 <span>Günlük</span>
-                <p>104</p>
+                <p>{data.advertisementCount && data.advertisementCount.day}</p>
               </div>
               <div className="right-top-share share-box col-lg-6">
                 <span>Həftəlik</span>
-                <p>233</p>
+                <p>{data.advertisementCount && data.advertisementCount.week}</p>
               </div>
             </div>
             <div className="bottom-share share-box">
               <span>Aylıq</span>
-              <p>1627</p>
+              <p>{data.advertisementCount && data.advertisementCount.month}</p>
             </div>
           </div>
         </div>

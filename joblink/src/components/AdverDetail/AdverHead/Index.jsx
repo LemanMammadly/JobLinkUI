@@ -2,18 +2,21 @@ import React, { useEffect, useState } from "react";
 import "./Index.css";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaRegClock } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { IoFlagOutline } from "react-icons/io5";
 import { BsReplyFill } from "react-icons/bs";
 import { LuPrinter } from "react-icons/lu";
 import { IoMdClose } from "react-icons/io";
-import ComplaintModal from "../ComplaintModal/Index"
+import ComplaintModal from "../ComplaintModal/Index";
 import { FaRegBuilding } from "react-icons/fa";
-import axios from 'axios';
+import axios from "axios";
+import { format } from 'date-fns';
+import { az } from 'date-fns/locale';
 
 const Index = () => {
-  const [data,setData]=useState();
+  const [data, setData] = useState([]);
   const [isApplyLinkVisible, setIsApplyLinkVisible] = useState(true);
+  const { id } = useParams();
 
   const handleClick = (e) => {
     setIsApplyLinkVisible(false);
@@ -30,18 +33,21 @@ const Index = () => {
       "E-mail ünvanı kopyalandı";
   };
 
-  useEffect(()=>{
-    axios.get(
-      `https://localhost:7131/api/Advertisements/Get`
-    )
-    .then((res)=>{
-      setData(res.data)
-    })
-    .catch((err)=>{
-      console.log(err);
-    })
-  },[])
+  useEffect(() => {
+    axios
+      .get(`https://localhost:7131/api/Advertisements/GetFalse/${id}`)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [id]);
 
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return format(date, "dd MMMM yyyy", { locale: az });
+  };
 
   return (
     <section className="adver-head">
@@ -56,7 +62,7 @@ const Index = () => {
               src="https://storage.jobsearch.az/storage/pages/2227/xalqbank.svg"
               alt=""
             />
-            <Link className="m-0">Zaman Broker</Link>
+            <Link className="m-0">{data.company && data.company.name}</Link>
             <div className="other-adver mx-4">
               <Link className="d-flex align-items-center gap-1">
                 {" "}
@@ -72,7 +78,7 @@ const Index = () => {
           </div>
           <div className="view-wish d-flex align-items-center gap-2">
             <IoEyeOutline style={{ color: "rgb(111, 117, 126)" }} />
-            <span>372</span>
+            <span>{data.viewCount}</span>
             <div className="hr-div"></div>
             <svg
               className="me-2 heart-svg"
@@ -96,15 +102,15 @@ const Index = () => {
         <div className="adver-head-bottom d-flex align-items-center justify-content-between">
           <div className="adver-head-bottom-left">
             <div className="adver-title d-flex align-items-center">
-              <h1>Insurance Service Representative</h1>
+              <h1>{data.title}</h1>
               <span className="new">YENİ</span>
             </div>
             <div className="deadline-cat d-flex align-items-center gap-4 my-3">
               <div className="deadline">
-                <FaRegClock /> Deadline 19 Mart 2024
+                <FaRegClock /> Deadline {data.endDate && formatDate(data.endDate)}
               </div>
               <div className="category-adver">
-                <Link>Maliyyə Xidmətləri</Link>
+                <Link>{data.category && data.category.name}</Link>
               </div>
             </div>
           </div>
@@ -120,7 +126,7 @@ const Index = () => {
                   <Link onClick={copy} className="mail-link">
                     {" "}
                     <IoMdClose onClick={closeClick} className="me-1" />{" "}
-                    support@smartit.az
+                    {data.company && data.company.email}
                   </Link>
                 )}
 
@@ -146,7 +152,14 @@ const Index = () => {
                 Şikayət et
               </span>
               <div className="hr-div"></div>
-              <span onClick={()=>window.print()} style={{ color: "rgb(111, 117, 126);", fontSize: "13px",cursor:"pointer" }}>
+              <span
+                onClick={() => window.print()}
+                style={{
+                  color: "rgb(111, 117, 126);",
+                  fontSize: "13px",
+                  cursor: "pointer",
+                }}
+              >
                 <LuPrinter className="me-1" style={{ fontSize: "17px" }} /> Çap
                 et
               </span>
@@ -154,7 +167,7 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <ComplaintModal/>
+      <ComplaintModal />
     </section>
   );
 };

@@ -8,9 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <AdvertisementFilterProvider>
   <SearchProvider>
-  <React.StrictMode>
     <App />
-  </React.StrictMode>
   </SearchProvider>
   </AdvertisementFilterProvider>
 );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoBag } from "react-icons/io5";
 import { MdCategory } from "react-icons/md";
 import { GrStorage } from "react-icons/gr";
@@ -13,6 +13,16 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
   const [active, setActive] = useState("");
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("isDark");
+    if (savedTheme === "true") {
+      applyDarkMode();
+      setIsDark(true);
+    }
+  }, []);
+
 
   const handleClick = (event) => {
     if (event.currentTarget.id === "img-link") {
@@ -24,8 +34,43 @@ const Index = () => {
     }
   };
 
+  const applyDarkMode = () => {
+    const styleElement = document.createElement("style");
+    styleElement.innerHTML = `
+      * {
+        background-color: #333 !important;
+        color: white !important;
+      }
+    `;
+    document.head.appendChild(styleElement);
+  };
+  
+  const removeDarkMode = () => {
+    const styleElements = document.head.querySelectorAll("style");
+    styleElements.forEach((styleElement) => {
+      if (styleElement.innerHTML.includes("background-color: #333")) {
+        document.head.removeChild(styleElement);
+      }
+    });
+  };
+
+  const toggleDark = () => {
+    if (!isDark) {
+      applyDarkMode();
+      localStorage.setItem("isDark", "true");
+    } else {
+      removeDarkMode();
+      localStorage.setItem("isDark", "false");
+    }
+    setIsDark(!isDark);
+  };
+
+
+  
+
+
   return (
-    <header className="py-lg-2 px-lg-5 px-md-3 py-md-1 px-2 py-2">
+    <header className={`py-lg-2 px-lg-5 px-md-3 py-md-1 px-2 py-2 ${isDark ? "dark" : ""}`}>
       <div className="all-header d-flex align-items-center justify-content-between col-lg-12">
         <div className="left-header d-flex col-lg-6">
           <Link to="/" id="img-link" className="w-25" onClick={handleClick}>
@@ -147,7 +192,7 @@ const Index = () => {
                 </select>
               </li>
               <li>
-                <Link>
+                <Link onClick={toggleDark}>
                   <FaMoon className="right-icons" />
                 </Link>
               </li>
